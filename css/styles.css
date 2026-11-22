@@ -1,57 +1,151 @@
-< !-- Author: Course: Lesson: -->body {
-    bg-color: #eee;
-    font-family: Ariel, sans-serif;
-    font-size: 9px;
-    color: #7af0ff;
+
+/*
+Author: kay2261076
+Course: CIS133DA
+Section: 27531
+Lesson: 12
+
+CSS Validation Corrections:
+1. Replaced the incorrect HTML comment with a CSS comment.
+2. Changed bg-color to background-color.
+3. Corrected Ariel to Arial.
+4. Increased font size for readability.
+5. Added missing opening and closing braces to the header selector.
+6. Removed the invalid ampersand from the table selector.
+7. Added the missing semicolon after background-color.
+8. Removed the extra closing brace.
+9. Improved text and background colors for better contrast.
+10. Added accessible focus and hover styling.
+*/
+
+body {
+    background-color: #eee;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    line-height: 1.6;
 }
 
-header width: 80%;
-padding: 20px 0px;
-margin: 0 auto;
-text-align: center;
+header {
+    width: 80%;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
 main {
     width: 80%;
-    padding: 30px 0px;
+    padding: 30px 0;
     margin: 0 auto;
 }
 
 nav a {
+    display: inline-block;
     margin: 10px;
-    padding: 2px;
-    background-color: #FFFF00;
-    color: #9D85FF;
+    padding: 10px;
+    background-color: #185f80;
+    color: #fff;
     text-decoration: none;
+    border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #123f55;
+    color: #fff;
+    text-decoration: underline;
 }
 
 h1,
 h2,
 h3 {
     font-family: Georgia, serif;
+    color: #185f80;
 }
 
 img {
     display: block;
-    margin: auto;
+    margin: 20px auto;
     width: 300px;
+    max-width: 100%;
+    height: auto;
 }
 
 table {
-    & width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
 }
 
 table,
 th,
 td {
-    border: 1px solid #FFF;
-    background-color: #FFFF00 border-collapse: collapse;
+    border: 1px solid #555;
     padding: 10px;
 }
 
 th {
     background-color: #185f80;
+    color: #fff;
 }
+
+td {
+    background-color: #fff;
+    color: #222;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    color: #222;
+}
+
+fieldset {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #555;
+}
+
+legend {
+    font-weight: bold;
+    color: #185f80;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+}
+
+input,
+textarea {
+    margin: 5px 0;
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #185f80;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #123f55;
+    text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #b45309;
+    outline-offset: 2px;
 }
 
 footer {
@@ -59,5 +153,28 @@ footer {
     margin: auto;
     text-align: center;
     background-color: #185f80;
+    color: #fff;
     padding: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    header,
+    main,
+    footer {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
 }
